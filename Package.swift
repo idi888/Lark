@@ -9,8 +9,8 @@ let package = Package(
     ],
     targets: [
         .target(name: "ALark", dependencies: ["Alamofire"]),
-        .target(name: "CodeGenerator", dependencies: ["Lark", "SchemaParser"]),
-        .target(name: "SchemaParser", dependencies: ["Lark"]),
+        .target(name: "CodeGenerator", dependencies: ["ALark", "SchemaParser"]),
+        .target(name: "SchemaParser", dependencies: ["ALark"]),
         .target(name: "lark-generate-client", dependencies: ["SchemaParser", "CodeGenerator"])
     ],
     swiftLanguageVersions: [4]
