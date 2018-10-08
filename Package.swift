@@ -11,10 +11,7 @@ let package = Package(
         .target(name: "Lark", dependencies: ["Alamofire"]),
         .target(name: "CodeGenerator", dependencies: ["Lark", "SchemaParser"]),
         .target(name: "SchemaParser", dependencies: ["Lark"]),
-        .target(name: "lark-generate-client", dependencies: ["SchemaParser", "CodeGenerator"]),
-        .testTarget(name: "CodeGeneratorTests", dependencies: ["CodeGenerator"]),
-        .testTarget(name: "LarkTests", dependencies: ["Lark"]),
-        .testTarget(name: "SchemaParserTests", dependencies: ["SchemaParser"]),
+        .target(name: "lark-generate-client", dependencies: ["SchemaParser", "CodeGenerator"])
     ],
     swiftLanguageVersions: [4]
 )
