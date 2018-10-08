@@ -184,7 +184,7 @@ struct Call: URLRequestConvertible {
 extension DataRequest {
     @discardableResult
     func responseSOAP(
-        queue: DispatchQueue? = nil,
+        queue: DispatchQueue? = DispatchQueue.global(qos: .default),
         completionHandler: @escaping (_ response: DataResponse<Envelope>) -> Void)
         -> Self {
         return response(queue: queue, responseSerializer: EnvelopeDeserializer(), completionHandler: completionHandler)

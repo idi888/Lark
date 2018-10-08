@@ -25,10 +25,12 @@ extension XMLElement {
     func addNamespace(uri: String) -> String {
         for i in 1..<Int.max {
             let prefix = "ns\(i)"
-            if resolveNamespace(forName: prefix) == nil {
-                let namespace = XMLNode.namespace(withName: prefix, stringValue: uri) as! XMLNode
-                addNamespace(namespace)
-                return prefix
+            if self.prefix != prefix {
+                if resolveNamespace(forName: prefix) == nil {
+                    let namespace = XMLNode.namespace(withName: prefix, stringValue: uri) as! XMLNode
+                    addNamespace(namespace)
+                    return prefix
+                }
             }
         }
         fatalError()

@@ -243,7 +243,7 @@ extension Date: XMLDeserializable, XMLSerializable {
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(identifier: "UTC")!
+        formatter.timeZone = Calendar.current.timeZone
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         return formatter
     }()
@@ -252,21 +252,21 @@ extension Date: XMLDeserializable, XMLSerializable {
             // formatter with milliseconds
             let formatter = DateFormatter()
             formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = TimeZone(identifier: "UTC")!
+            formatter.timeZone = Calendar.current.timeZone
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
             return formatter
         }(), {
             // formatter without timezone identifier
             let formatter = DateFormatter()
             formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = TimeZone(identifier: "UTC")!
+            formatter.timeZone = Calendar.current.timeZone
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
             return formatter
         }(), {
             // formatter with milliseconds and without timezone identifier
             let formatter = DateFormatter()
             formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.timeZone = TimeZone(identifier: "UTC")!
+            formatter.timeZone = Calendar.current.timeZone
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
             return formatter
         }()
