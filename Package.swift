@@ -12,6 +12,5 @@ let package = Package(
         .target(name: "CodeGenerator", dependencies: ["ALark", "SchemaParser"]),
         .target(name: "SchemaParser", dependencies: ["ALark"]),
         .target(name: "lark-generate-client", dependencies: ["SchemaParser", "CodeGenerator"])
-    ],
-    swiftLanguageVersions: [4]
+    ]
 )
