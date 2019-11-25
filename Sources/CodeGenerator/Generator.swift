@@ -208,15 +208,15 @@ extension Schema {
 
 // todo: cleanup
 let baseTypes: [QualifiedName: Identifier] = [
-    QualifiedName(uri: NS_XS, localName: "byte"): "Int8",
-    QualifiedName(uri: NS_XS, localName: "short"): "Int16",
-    QualifiedName(uri: NS_XS, localName: "int"): "Int32",
-    QualifiedName(uri: NS_XS, localName: "long"): "Int64",
+    QualifiedName(uri: NS_XS, localName: "byte"): "Int",
+    QualifiedName(uri: NS_XS, localName: "short"): "Int",
+    QualifiedName(uri: NS_XS, localName: "int"): "Int",
+    QualifiedName(uri: NS_XS, localName: "long"): "Int",
 
-    QualifiedName(uri: NS_XS, localName: "unsignedByte"): "UInt8",
-    QualifiedName(uri: NS_XS, localName: "unsignedShort"): "UInt16",
-    QualifiedName(uri: NS_XS, localName: "unsignedInt"): "UInt32",
-    QualifiedName(uri: NS_XS, localName: "unsignedLong"): "UInt64",
+    QualifiedName(uri: NS_XS, localName: "unsignedByte"): "UInt",
+    QualifiedName(uri: NS_XS, localName: "unsignedShort"): "UInt",
+    QualifiedName(uri: NS_XS, localName: "unsignedInt"): "UInt",
+    QualifiedName(uri: NS_XS, localName: "unsignedLong"): "UInt",
 
     QualifiedName(uri: NS_XS, localName: "boolean"): "Bool",
     QualifiedName(uri: NS_XS, localName: "float"): "Float",
